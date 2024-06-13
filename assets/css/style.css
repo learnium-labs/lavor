@@ -1,0 +1,156 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f9fa;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px rgba(0 0 0 / 0.15);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(125deg, #f5f5f5, #ddd);
+  border-radius: 10px;
+}
+
+.text-primary-subtle {
+  color: rgba(83, 155, 255, 1) !important;
+  /* color: #5d87ff; */
+  /* color: #5d87ff; */
+}
+
+.btn-primary-subtle {
+  background-color: rgba(83, 155, 255, 1) !important;
+  /* color: #5d87ff; */
+  /* color: #5d87ff; */
+}
+
+.font-lora {
+  font-family: "Lora", serif;
+}
+
+.text-sm {
+  font-size: 0.8rem;
+}
+
+.text-md {
+  font-size: 1rem;
+}
+
+.text-lg {
+  font-size: 1.2rem;
+}
+
+.text-xl {
+  font-size: 1.5rem;
+}
+
+.text-xxl {
+  font-size: 2rem;
+}
+
+.hero-content .intro-title {
+  font-size: 2rem;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.hero-content {
+  padding: 3rem 2rem;
+}
+
+.format-school {
+  font-size: 1.3rem;
+}
+
+.btn-intro {
+  font-size: 1rem;
+}
+
+.scroll-to-top {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.scroll-to-top.floating {
+  background-color: #dc3545; /* Ganti warna latar belakang saat tombol mengambang */
+  transform: scale(1.1); /* Efek scaling untuk memberikan kesan mengambang */
+}
+
+/* MEDIA (BREAKPOINT)
+Extra small devices (portrait phones, less than 576px)
+*/
+@media only screen and (max-width: 576px) {
+}
+
+/* Small devices (landscape phones, less than 768px) */
+
+@media only screen and (min-width: 768px) {
+  .hero-content {
+    padding: 4rem;
+  }
+
+  .hero-content .intro-title {
+    font-size: 2rem;
+  }
+
+  .format-school {
+    font-size: 1.2rem;
+  }
+
+  .btn-intro {
+    font-size: 0.8rem;
+  }
+}
+
+/* Large devices (desktops, less than 992px) */
+
+/* @media only screen and (min-width: 992px) {
+
+} */
+
+/* Extra large devices (large desktops, less than 1200px) */
+
+@media only screen and (min-width: 1200px) {
+  .hero-content {
+    padding: 7rem 4.5rem 2rem;
+  }
+
+  .hero-content .intro-title {
+    font-size: 2.5rem;
+  }
+
+  .hero {
+    height: calc(100vh - 60px);
+  }
+
+  .hero-content .format-school {
+    font-size: 1.1rem;
+  }
+
+  .btn-intro {
+    font-size: 1rem;
+  }
+}
