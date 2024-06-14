@@ -17,10 +17,43 @@ body {
   border-radius: 10px;
 }
 
+.search-complaint input {
+  border-radius: 20px;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.search-complaint input::placeholder {
+  color: #ced4da;
+}
+
+.search-complaint button {
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+
+.shadow-xd {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.03);
+}
+
+.badge-blue {
+  border: 1px solid;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  width: max-content;
+  color: rgba(83, 155, 255, 1);
+  background-color: #f0f9ff;
+  border-radius: 35px;
+}
+
 .text-primary-subtle {
   color: rgba(83, 155, 255, 1) !important;
   /* color: #5d87ff; */
   /* color: #5d87ff; */
+}
+
+.text-success-subtle {
+  color: rgba(19, 222, 185, 1) !important;
 }
 
 .btn-primary-subtle {
@@ -60,7 +93,7 @@ body {
 .line-clamp {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   overflow: hidden;
 }
 
