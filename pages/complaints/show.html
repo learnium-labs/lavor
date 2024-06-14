@@ -83,63 +83,15 @@
     <!-- Hero -->
     <section>
       <div class="container">
-        <div class="intro-complaint py-4">
-          <h4 class="badge-blue m-auto">Forum Pengaduan</h4>
-
-          <div
-            class="d-flex align-items-center flex-wrap justify-content-between mt-5 py-md-4 py-0"
-          >
-            <div>
-              <span class="text-primary-subtle fw-medium">Complaint</span>
-              <h1 class="mt-3">
-                Forum <span class="text-primary-subtle">pengaduan</span> <br />
-                masyarakat online
-              </h1>
-            </div>
-            <a
-              href="./create.html"
-              class="btn-intro btn btn-primary mt-2 mt-md-0"
-            >
-              <i class="bi bi-plus-lg me-1"></i>
-              Buat Pengaduan
-            </a>
-          </div>
+        <div class="intro-complaint pt-4 pb-2">
+          <a class="text-decoration-none" href="/pages/complaints/index.html">
+            <h4 class="badge-blue m-auto">
+              <i class="bi bi-arrow-left me-2"></i>Detail Forum Pengaduan
+            </h4>
+          </a>
         </div>
 
         <div class="col-md-9 m-auto py-4">
-          <!-- searching global -->
-          <div class="search-complaint">
-            <form action="" method="get">
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control border-0 shadow-xd"
-                  placeholder="Cari pengaduan yang serupa..."
-                  aria-label="Cari pengaduan"
-                  aria-describedby="button-addon2"
-                />
-                <button
-                  class="btn btn-primary"
-                  type="button"
-                  id="button-addon2"
-                >
-                  Cari
-                </button>
-              </div>
-            </form>
-          </div>
-          <!-- end searching global -->
-
-          <!-- intro text complaints -->
-          <div class="intro-text-complaint col-md-7 mt-5 mb-4">
-            <h5>Pengaduan Terbaru</h5>
-            <p>
-              Berikut adalah daftar pengaduan terbaru yang telah dikirim oleh
-              masyarakat. Anda dapat melihat detail pengaduan.
-            </p>
-          </div>
-          <!-- end intro text complaints -->
-
           <!-- list of complaints -->
           <div class="list-complaint pb-5">
             <!-- patokan foreach ( sisanya dummy / mainkan kondisi )-->
@@ -153,8 +105,8 @@
                     class="img-fluid rounded-circle"
                   />
                   <div>
-                    <a href="show.html" class="text-decoration-none">
-                      <h5 class="card-title text-dark line-clamp">
+                    <a href="#" class="text-decoration-none">
+                      <h5 class="card-title text-dark">
                         Jalanan pada daerah saya yaitu di Jalan Raya Bogor rusak
                         parah, mohon segera diperbaiki oleh pihak terkait agar
                         tidak menimbulkan kecelakaan.
@@ -163,7 +115,6 @@
                     <div class="d-flex gap-3 align-items-center mb-2">
                       <div class="d-flex align-items-center gap-2">
                         <i
-                          style="font-size: 0.85rem"
                           class="bi bi-chat-left-text-fill text-primary-subtle"
                         ></i>
                         <span class="text-sm"
@@ -201,94 +152,104 @@
                     </p>
                   </div>
                 </div>
+                <hr />
+                <!-- desc -->
+                <div class="desc-complaint mt-4">
+                  <h5 class="text-dark">Deskripsi</h5>
+                  <p class="text-muted text-justify">
+                    Jalanan pada daerah saya yaitu di Jalan Raya Bogor rusak
+                    parah, mohon segera diperbaiki oleh pihak terkait agar tidak
+                    menimbulkan kecelakaan. Jalanan pada daerah saya yaitu di
+                    Jalan Raya Bogor rusak parah, mohon segera diperbaiki oleh
+                    pihak terkait agar tidak menimbulkan kecelakaan. Jalanan
+                    pada daerah saya yaitu di Jalan Raya Bogor rusak parah,
+                    mohon segera diperbaiki oleh pihak terkait agar tidak
+                    menimbulkan kecelakaan. Jalanan pada daerah saya yaitu di
+                    Jalan Raya Bogor rusak parah, mohon segera diperbaiki oleh
+                    pihak terkait agar tidak menimbulkan kecelakaan.
+                  </p>
+                  <hr />
+                  <!-- image -->
+                  <div class="image-complaint mt-4">
+                    <h5 class="text-dark">Dokumentasi</h5>
+                    <div class="d-flex gap-2 flex-wrap">
+                      <img
+                        width="250"
+                        src="/assets/images/street/jalan-rusak-1.jpeg"
+                        alt="Foto Pengaduan"
+                        class="img-fluid rounded-3 documantion-image"
+                      />
+                      <img
+                        width="250"
+                        src="/assets/images/street/jalan-rusak-2.jpeg"
+                        alt="Foto Pengaduan"
+                        class="img-fluid rounded-3 documantion-image"
+                      />
+                      <img
+                        width="250"
+                        src="/assets/images/street/jalan-rusak-3.jpeg"
+                        alt="Foto Pengaduan"
+                        class="img-fluid rounded-3 documantion-image"
+                      />
+                    </div>
+                    <hr />
+                    <!-- comment -->
+                    <div class="comment-complaint mt-4">
+                      <h5 class="text-dark">Komentar</h5>
+                      <div
+                        class="card border border-primary-subtle shadow-xd rounded-4 mb-4"
+                      >
+                        <div class="card-body p-4">
+                          <div class="d-flex align-items-start gap-3">
+                            <img
+                              width="40"
+                              src="/assets/images/avatar.jpg"
+                              alt="Complaint Image"
+                              class="img-fluid rounded-circle"
+                            />
+                            <div>
+                              <a href="#" class="text-decoration-none">
+                                <h6 class="card-title text-dark mb-0">
+                                  Terima kasih atas informasinya, kami akan
+                                  segera menindaklanjuti.
+                                </h6>
+                              </a>
+                              <div class="d-flex gap-3 align-items-center mb-2">
+                                <div class="d-flex align-items-center gap-2">
+                                  <i
+                                    class="bi bi-eye-fill text-primary-subtle"
+                                  ></i>
+                                  <span class="text-sm"
+                                    >3
+                                    <span class="d-none d-md-inline-block"
+                                      >Dilihat</span
+                                    ></span
+                                  >
+                                </div>
+                                <div>
+                                  <i
+                                    style="font-size: 0.85rem"
+                                    class="bi bi-check-circle-fill text-success-subtle"
+                                  ></i>
+                                  <span class="text-sm">Submitted </span>
+                                </div>
+                              </div>
+                              <p class="card-text text-muted text-sm">
+                                Balasan dikirim pada 27 Januari 2024 oleh
+                                <span class="fw-medium">Admin</span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end comment -->
+                  </div>
+                  <!-- end image -->
+                </div>
               </div>
             </div>
             <!-- end patokan foreach -->
-            <div class="card border-0 shadow-xd rounded-4 mb-4">
-              <div class="card-body p-4">
-                <div class="d-flex align-items-start gap-3">
-                  <img
-                    width="40"
-                    src="/assets/images/avatar.jpg"
-                    alt="Complaint Image"
-                    class="img-fluid rounded-circle"
-                  />
-                  <div>
-                    <a href="#" class="text-decoration-none">
-                      <h5 class="card-title text-dark line-clamp">
-                        Lampu jalan di Jalan Raya Bogor mati, mohon segera
-                        diperbaiki agar tidak menimbulkan kecelakaan.
-                      </h5>
-                    </a>
-                    <div class="d-flex gap-4 align-items-center mb-2">
-                      <!-- <div class="d-flex align-items-center gap-2">
-                        <i
-                          class="bi bi-chat-left-text-fill text-primary-subtle"
-                        ></i>
-                        <span class="text-sm">1 Komentar</span>
-                      </div> -->
-                      <div class="d-flex align-items-center gap-2">
-                        <i class="bi bi-eye-fill text-primary-subtle"></i>
-                        <span class="text-sm">10 Dilihat</span>
-                      </div>
-                      <!-- <div>
-                        <i
-                          class="bi bi-check-circle-fill text-success-subtle"
-                        ></i>
-                        <span class="text-sm">Sudah dilihat admin</span>
-                      </div> -->
-                    </div>
-                    <p class="card-text text-muted">
-                      Dikirim pada 12 Oktober 2023 oleh
-                      <span class="fw-medium">Akbar Hidayat</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card border-0 shadow-xd rounded-4 mb-4">
-              <div class="card-body p-4">
-                <div class="d-flex align-items-start gap-3">
-                  <img
-                    width="40"
-                    src="/assets/images/avatar.jpg"
-                    alt="Complaint Image"
-                    class="img-fluid rounded-circle"
-                  />
-                  <div>
-                    <a href="#" class="text-decoration-none">
-                      <h5 class="card-title text-dark line-clamp">
-                        Daerah saya di Jalan Raya Bogor sering terjadi banjir,
-                        mohon segera diperbaiki saluran air agar tidak terjadi
-                        banjir lagi.
-                      </h5>
-                    </a>
-                    <div class="d-flex gap-4 align-items-center mb-2">
-                      <!-- <div class="d-flex align-items-center gap-2">
-                        <i
-                          class="bi bi-chat-left-text-fill text-primary-subtle"
-                        ></i>
-                        <span class="text-sm">1 Komentar</span>
-                      </div> -->
-                      <div class="d-flex align-items-center gap-2">
-                        <i class="bi bi-eye-fill text-primary-subtle"></i>
-                        <span class="text-sm">5 Dilihat</span>
-                      </div>
-                      <!-- <div>
-                        <i
-                          class="bi bi-check-circle-fill text-success-subtle"
-                        ></i>
-                        <span class="text-sm">Sudah dilihat admin</span>
-                      </div> -->
-                    </div>
-                    <p class="card-text text-muted">
-                      Dikirim pada 03 September 2023 oleh
-                      <span class="fw-medium">Rizki Pratama</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
           <!-- end list of complaints -->
         </div>

@@ -17,6 +17,10 @@ body {
   border-radius: 10px;
 }
 
+.documantion-image {
+  width: auto;
+}
+
 /* styling box image multiple */
 
 .btn-delete {
@@ -185,6 +189,10 @@ Extra small devices (portrait phones, less than 576px)
 /* Small devices (landscape phones, less than 768px) */
 
 @media only screen and (min-width: 768px) {
+  .documantion-image {
+    width: 250px;
+  }
+
   .hero-content {
     padding: 4rem;
   }
