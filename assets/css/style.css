@@ -17,6 +17,50 @@ body {
   border-radius: 10px;
 }
 
+/* styling box image multiple */
+
+.btn-delete {
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.box-image-preview {
+  border: 1px solid #ccc;
+  width: 120px;
+  height: 120px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.box-image {
+  border: 1px dashed #ccc;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+}
+
+.hide-input {
+  position: absolute;
+  unset: 0;
+  opacity: 0;
+}
+
+/* end */
+
+.header-complaint {
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.03);
+  border-radius: 15px;
+}
+
 .search-complaint input {
   border-radius: 20px;
   padding: 10px 20px;

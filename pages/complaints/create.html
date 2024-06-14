@@ -48,7 +48,7 @@
               <a class="nav-link" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="/pages/complaints/create.html"
+              <a class="nav-link active" href="/pages/complaints/index.html"
                 >Pengaduan</a
               >
             </li>
@@ -83,208 +83,99 @@
     <!-- Hero -->
     <section>
       <div class="container">
-        <div class="intro-complaint py-4">
-          <h4 class="badge-blue m-auto">Forum Pengaduan</h4>
-
-          <div
-            class="d-flex align-items-center flex-wrap justify-content-between mt-5 py-md-4 py-0"
-          >
-            <div>
-              <span class="text-primary-subtle fw-medium">Complaint</span>
-              <h1 class="mt-3">
-                Forum <span class="text-primary-subtle">pengaduan</span> <br />
-                masyarakat online
-              </h1>
+        <div class="col-md-8 m-auto py-md-5 py-4">
+          <!-- header title -->
+          <div class="header-complaint d-flex align-items-center">
+            <div class="col-md-8">
+              <h2>Tuliskan Keluhan Anda Disini.</h2>
+              <p class="text-secondary">
+                Isi formulir di bawah ini untuk mengirimkan keluhan Anda kepada
+                kami.
+              </p>
             </div>
-            <button class="btn-intro btn btn-primary mt-2 mt-md-0">
-              Buat Pengaduan
-            </button>
+            <div class="col-md-4">
+              <img
+                width="180"
+                src="/assets/images/svg/lemeting2.svg"
+                alt="Ilustrasi Pengaduan"
+                class="img-fluid"
+              />
+            </div>
           </div>
-        </div>
+          <!-- end header title -->
 
-        <div class="col-md-9 m-auto py-4">
-          <!-- searching global -->
-          <div class="search-complaint">
-            <form action="" method="get">
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control border-0 shadow-xd"
-                  placeholder="Cari pengaduan yang serupa..."
-                  aria-label="Cari pengaduan"
-                  aria-describedby="button-addon2"
-                />
-                <button
-                  class="btn btn-primary"
-                  type="button"
-                  id="button-addon2"
-                >
-                  Cari
+          <!-- form -->
+          <div class="card p-3 border-0 rounded-4 mt-4">
+            <div class="card-header bg-white border-0">
+              <h4 class="fw-medium">Form Pengaduan</h4>
+            </div>
+            <div class="card-body">
+              <form action="/pages/complaints/index.html" method="POST">
+                <div class="mb-3">
+                  <label for="title" class="form-label">Petanyaan</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="title"
+                    name="name"
+                    placeholder="Tuliskan judul keluhan Anda"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Kategori</label>
+                  <select
+                    class="form-select"
+                    id="category"
+                    name="category"
+                    required
+                  >
+                    <option selected>Pilih Kategori</option>
+                    <option value="1">Pelayanan Publik</option>
+                    <option value="2">Pelayanan Kesehatan</option>
+                    <option value="3">Pelayanan Pendidikan</option>
+                    <option value="4">Pelayanan Transportasi</option>
+                    <option value="5">Pelayanan Keamanan</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="file" class="form-label"
+                    >Upload gambar ( opsional )</label
+                  >
+                  <div class="d-flex align-items-center flex-wrap gap-2">
+                    <div class="box-image">
+                      <input
+                        id="file-input"
+                        name="attachments[]"
+                        type="file"
+                        required
+                        multiple
+                        class="form-control hide-input"
+                        accept="image/*"
+                      />
+                      <span class="text-muted">Upload</span>
+                    </div>
+                  </div>
+                  <small class="text-muted"
+                    >Upload gambar yang relevan dengan keluhan Anda.</small
+                  >
+                </div>
+                <div class="mb-3">
+                  <label for="complaint" class="form-label">Keluhan</label>
+                  <textarea
+                    class="form-control summernote"
+                    id="complaint"
+                    name="complaint"
+                    rows="3"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-sm btn-primary">
+                  Kirim Pengaduan
                 </button>
-              </div>
-            </form>
-          </div>
-          <!-- end searching global -->
-
-          <!-- intro text complaints -->
-          <div class="intro-text-complaint col-md-7 mt-5 mb-4">
-            <h5>Pengaduan Terbaru</h5>
-            <p>
-              Berikut adalah daftar pengaduan terbaru yang telah dikirim oleh
-              masyarakat. Anda dapat melihat detail pengaduan.
-            </p>
-          </div>
-          <!-- end intro text complaints -->
-
-          <!-- list of complaints -->
-          <div class="list-complaint pb-5">
-            <!-- patokan foreach ( sisanya dummy / mainkan kondisi )-->
-            <div class="card border-0 shadow-xd rounded-4 mb-4">
-              <div class="card-body p-4">
-                <div class="d-flex align-items-start gap-3">
-                  <img
-                    width="40"
-                    src="/assets/images/avatar.jpg"
-                    alt="Complaint Image"
-                    class="img-fluid rounded-circle"
-                  />
-                  <div>
-                    <a href="#" class="text-decoration-none">
-                      <h5 class="card-title text-dark line-clamp">
-                        Jalanan pada daerah saya yaitu di Jalan Raya Bogor rusak
-                        parah, mohon segera diperbaiki oleh pihak terkait agar
-                        tidak menimbulkan kecelakaan.
-                      </h5>
-                    </a>
-                    <div class="d-flex gap-3 gap-md-4 align-items-center mb-2">
-                      <div class="d-flex align-items-center gap-2">
-                        <i
-                          class="bi bi-chat-left-text-fill text-primary-subtle"
-                        ></i>
-                        <span class="text-sm"
-                          >1
-                          <span class="d-none d-md-inline-block"
-                            >Komentar</span
-                          ></span
-                        >
-                      </div>
-                      <div class="d-flex align-items-center gap-2">
-                        <i class="bi bi-eye-fill text-primary-subtle"></i>
-                        <span class="text-sm"
-                          >3
-                          <span class="d-none d-md-inline-block"
-                            >Dilihat</span
-                          ></span
-                        >
-                      </div>
-                      <div>
-                        <i
-                          class="bi bi-check-circle-fill text-success-subtle"
-                        ></i>
-                        <span class="text-sm"
-                          >Sudah dilihat
-                          <span class="d-none d-md-inline-block"
-                            >admin</span
-                          ></span
-                        >
-                      </div>
-                    </div>
-                    <p class="card-text text-muted">
-                      Dikirim pada 27 Januari 2024 oleh
-                      <span class="fw-medium">Novi Indah</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- end patokan foreach -->
-            <div class="card border-0 shadow-xd rounded-4 mb-4">
-              <div class="card-body p-4">
-                <div class="d-flex align-items-start gap-3">
-                  <img
-                    width="40"
-                    src="/assets/images/avatar.jpg"
-                    alt="Complaint Image"
-                    class="img-fluid rounded-circle"
-                  />
-                  <div>
-                    <a href="#" class="text-decoration-none">
-                      <h5 class="card-title text-dark line-clamp">
-                        Lampu jalan di Jalan Raya Bogor mati, mohon segera
-                        diperbaiki agar tidak menimbulkan kecelakaan.
-                      </h5>
-                    </a>
-                    <div class="d-flex gap-4 align-items-center mb-2">
-                      <!-- <div class="d-flex align-items-center gap-2">
-                        <i
-                          class="bi bi-chat-left-text-fill text-primary-subtle"
-                        ></i>
-                        <span class="text-sm">1 Komentar</span>
-                      </div> -->
-                      <div class="d-flex align-items-center gap-2">
-                        <i class="bi bi-eye-fill text-primary-subtle"></i>
-                        <span class="text-sm">10 Dilihat</span>
-                      </div>
-                      <!-- <div>
-                        <i
-                          class="bi bi-check-circle-fill text-success-subtle"
-                        ></i>
-                        <span class="text-sm">Sudah dilihat admin</span>
-                      </div> -->
-                    </div>
-                    <p class="card-text text-muted">
-                      Dikirim pada 12 Oktober 2023 oleh
-                      <span class="fw-medium">Akbar Hidayat</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card border-0 shadow-xd rounded-4 mb-4">
-              <div class="card-body p-4">
-                <div class="d-flex align-items-start gap-3">
-                  <img
-                    width="40"
-                    src="/assets/images/avatar.jpg"
-                    alt="Complaint Image"
-                    class="img-fluid rounded-circle"
-                  />
-                  <div>
-                    <a href="#" class="text-decoration-none">
-                      <h5 class="card-title text-dark line-clamp">
-                        Daerah saya di Jalan Raya Bogor sering terjadi banjir,
-                        mohon segera diperbaiki saluran air agar tidak terjadi
-                        banjir lagi.
-                      </h5>
-                    </a>
-                    <div class="d-flex gap-4 align-items-center mb-2">
-                      <!-- <div class="d-flex align-items-center gap-2">
-                        <i
-                          class="bi bi-chat-left-text-fill text-primary-subtle"
-                        ></i>
-                        <span class="text-sm">1 Komentar</span>
-                      </div> -->
-                      <div class="d-flex align-items-center gap-2">
-                        <i class="bi bi-eye-fill text-primary-subtle"></i>
-                        <span class="text-sm">5 Dilihat</span>
-                      </div>
-                      <!-- <div>
-                        <i
-                          class="bi bi-check-circle-fill text-success-subtle"
-                        ></i>
-                        <span class="text-sm">Sudah dilihat admin</span>
-                      </div> -->
-                    </div>
-                    <p class="card-text text-muted">
-                      Dikirim pada 03 September 2023 oleh
-                      <span class="fw-medium">Rizki Pratama</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
-          <!-- end list of complaints -->
         </div>
       </div>
     </section>
@@ -311,7 +202,7 @@
               <li class="mb-2">
                 <a
                   class="text-decoration-none text-white"
-                  href="/pages/complaints/create.html"
+                  href="/pages/complaints/index.html"
                   >Pengaduan</a
                 >
               </li>
@@ -408,6 +299,91 @@
           } else {
             scrollButton.removeClass("floating");
           }
+        });
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+    <script>
+      $(".summernote").summernote({
+        // simple toolbar
+        toolbar: [
+          ["style", ["style"]],
+          ["font", ["bold", "underline", "clear"]],
+          ["para", ["ul", "ol", "paragraph"]],
+        ],
+        placeholder: "Tuliskan keluhan Anda di sini...",
+        tabsize: 2,
+        height: 220,
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("#file-input").on("change", function () {
+          $(".box-image-preview").remove(); // Hapus semua pratinjau yang ada sebelumnya
+
+          $.each(this.files, function (index, file) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+              var preview = $(
+                '<div class="box-image-preview overflow-hidden">' +
+                  '<img src="' +
+                  e.target.result +
+                  '" alt="Preview" style="width: 100%;">' +
+                  '<i class="bi bi-trash text-danger fs-5 btn-delete"></i>' +
+                  "</div>"
+              );
+              $(".box-image").after(preview);
+            };
+            reader.readAsDataURL(file);
+          });
+        });
+
+        $(document).on("click", ".btn-delete", function () {
+          $(this).closest(".box-image-preview").remove();
+          if ($(".box-image-preview").length === 0) {
+            // Kembalikan input file ke keadaan semula jika tidak ada pratinjau yang tersisa
+            $("#file-input").val("");
+          }
+
+          // Update file input
+          var files = $("#file-input")[0].files;
+          var newFiles = [];
+          var remainingFiles = [];
+
+          $(".box-image-preview img").each(function () {
+            remainingFiles.push($(this).attr("src"));
+          });
+
+          $.each(files, function (index, file) {
+            var fileReader = new FileReader();
+            fileReader.onload = function (e) {
+              if (remainingFiles.indexOf(e.target.result) !== -1) {
+                newFiles.push(file);
+              }
+              if (index === files.length - 1) {
+                var dataTransfer = new DataTransfer();
+                for (var i = 0; i < newFiles.length; i++) {
+                  dataTransfer.items.add(newFiles[i]);
+                }
+                $("#file-input")[0].files = dataTransfer.files;
+              }
+            };
+            fileReader.readAsDataURL(file);
+          });
         });
       });
     </script>
