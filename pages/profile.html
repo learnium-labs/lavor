@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
     <title>Lavor</title>
   </head>
   <body class="font-sans antialiased">
@@ -26,7 +26,7 @@
       <div class="container">
         <a
           class="navbar-brand font-lora text-primary-subtle fw-semibold"
-          href="/"
+          href="../../index.html"
           >🚨 Lavor</a
         >
         <button
@@ -45,57 +45,29 @@
             class="navbar-nav mb-2 mb-lg-0 d-flex gap-3 justify-content-end w-100"
           >
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html"
+              <a class="nav-link" aria-current="page" href="../../index.html"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/complaints/index.html"
+              <a
+                class="nav-link active"
+                href="../../pages/complaints/index.html"
                 >Pengaduan</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/letters/index.html">Surat</a>
+              <a class="nav-link" href="../../pages/letters/index.html"
+                >Surat</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/faq/index.html">FAQ</a>
+              <a class="nav-link" href="../../pages/faq/index.html">FAQ</a>
             </li>
-            <!-- <li class="nav-item">
+            <li class="nav-item">
               <div class="nav-link">
                 <a class="btn btn-outline-primary btn-sm" href="#">Masuk</a>
               </div>
-            </li> -->
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle text-dark text-capitalize"
-                href="javascript:void(0)"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                John Doe
-              </a>
-              <ul class="dropdown-menu dropdown-menu-lg-end">
-                <li>
-                  <a class="dropdown-item" href="./pages/profile.html"
-                    >Profil</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./pages/history.html"
-                    >Histori</a
-                  >
-                </li>
-                <hr style="margin: 8px 0" />
-                <li>
-                  <a
-                    class="dropdown-item mt-1"
-                    onclick="event.preventDefault();this.closest('form').submit();"
-                    href="javascript:void(0)"
-                    >Logout</a
-                  >
-                </li>
-              </ul>
             </li>
           </ul>
           <!-- <form class="d-flex" role="search">
@@ -115,44 +87,122 @@
     <!-- End Navigation -->
 
     <!-- Hero -->
-    <section class="hero">
-      <div class="container-fluid">
-        <!-- hero image full -->
-        <div class="d-flex flex-wrap align-items-center">
-          <div class="col-md-7 hero-content text-center text-md-start">
-            <!-- content title -->
-            <div class="content-title">
-              <h1 class="text-dark intro-title fw-medium">
-                Selamat Datang di Forum
-                <span class="text-primary-subtle">Pengaduan</span> Masyarakat
-                Online
-              </h1>
-              <p class="format-school">
-                Anda dapat mengirimkan pengaduan atau keluhan Anda secara
-                online, dan kami akan segera menindaklanjuti.
-              </p>
-              <p class="format-school mt-2"></p>
-              <div
-                class="d-flex gap-3 mt-4 justify-content-center justify-content-md-start"
-              >
-                <a
-                  href="./pages/complaints/index.html"
-                  class="btn-intro btn btn-primary px-3 py-2"
-                  >Kirim Pengaduan</a
-                >
-                <a href="#" class="btn-intro btn btn-outline-primary px-3 py-2"
-                  >Buat Surat</a
-                >
-              </div>
+    <section>
+      <div class="container">
+        <div class="col-md-8 m-auto py-md-5 py-4">
+          <!-- form -->
+          <div class="card p-3 border-0 rounded-4">
+            <div class="card-header bg-white border-0">
+              <h4 class="fw-medium">Edit Profil</h4>
             </div>
-          </div>
-          <div class="col-md-5 hero-image">
-            <img
-              width="430"
-              src="./assets/images/svg/hero.svg"
-              alt="Hero Image"
-              class="img-fluid"
-            />
+            <div class="card-body">
+              <form action="/pages/complaints/index.html" method="POST">
+                <div class="row">
+                  <div class="col-12 mb-4 text-center">
+                    <div class="d-flex align-items-center flex-wrap gap-2">
+                      <div class="box-image rounded-circle m-auto mb-1">
+                        <input
+                          id="file-input"
+                          name="avatar"
+                          type="file"
+                          required
+                          class="form-control hide-input"
+                          accept="image/*"
+                        />
+                        <span class="text-muted">Upload</span>
+                      </div>
+                    </div>
+                    <small class="text-muted"
+                      >Ukuran file maksimal 2MB. Format file: JPG, JPEG,
+                      PNG</small
+                    >
+                  </div>
+                  <hr />
+                  <div class="col-md-6 mb-3">
+                    <label for="title" class="form-label">Nama Lengkap</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="title"
+                      name="name"
+                      placeholder="Masukkan nama lengkap Anda"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="nik" class="form-label">NIK</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nik"
+                      name="nik"
+                      disabled
+                      placeholder="Masukkan NIK Anda"
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="jk" class="form-label">Jenis Kelamin</label>
+                    <select
+                      class="form-select"
+                      id="jk"
+                      name="category"
+                      required
+                    >
+                      <option value="1">Laki-laki</option>
+                      <option value="2">Perempuan</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="email" class="form-label">Pekerjaan</label>
+                    <select
+                      class="form-select"
+                      id="category"
+                      name="category"
+                      required
+                    >
+                      <option selected>Pilih Pekerjaan</option>
+                      <option value="1">Karyawan Swasta</option>
+                      <option value="2">Pegawai Negeri</option>
+                      <option value="3">Wiraswasta</option>
+                      <option value="4">Lainnya</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="address" class="form-label">Alamat</label>
+                    <textarea
+                      class="form-control"
+                      id="address"
+                      name="address"
+                      rows="3"
+                      placeholder="Masukkan alamat lengkap Anda"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="agama" class="form-label">Agama</label>
+                    <select
+                      class="form-select"
+                      id="agama"
+                      name="category"
+                      required
+                    >
+                      <option selected>Pilih Agama</option>
+                      <option value="1">Islam</option>
+                      <option value="2">Kristen</option>
+                      <option value="3">Katolik</option>
+                      <option value="4">Hindu</option>
+                      <option value="5">Budha</option>
+                      <option value="6">Konghucu</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <button type="submit" class="btn btn-sm btn-primary">
+                      Update Profil
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -175,28 +225,30 @@
             <h5 class="mb-3">Link Terkait</h5>
             <ul class="list-unstyled text-sm">
               <li class="mb-2">
-                <a class="text-decoration-none text-white" href="index.html"
+                <a
+                  class="text-decoration-none text-white"
+                  href="../../index.html"
                   >Home</a
                 >
               </li>
               <li class="mb-2">
                 <a
                   class="text-decoration-none text-white"
-                  href="./pages/complaints/index.html"
+                  href="../../pages/complaints/index.html"
                   >Pengaduan</a
                 >
               </li>
               <li class="mb-2">
                 <a
                   class="text-decoration-none text-white"
-                  href="./pages/letters/index.html"
+                  href="../../pages/letters/index.html"
                   >Surat</a
                 >
               </li>
               <li class="mb-2">
                 <a
                   class="text-decoration-none text-white"
-                  href="./pages/faq/index.html"
+                  href="../../pages/faq/index.html"
                   >FAQ</a
                 >
               </li>
@@ -290,5 +342,6 @@
         });
       });
     </script>
+    <!-- End Script untuk animasi scroll ke atas -->
   </body>
 </html>
