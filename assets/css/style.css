@@ -17,6 +17,18 @@ body {
   border-radius: 10px;
 }
 
+.card-latter {
+  padding: 0.4rem;
+  border: 1px solid #f8f9fa;
+  border-radius: 15px;
+  transition: all 0.3s;
+}
+
+.card-latter:hover {
+  border: 1px solid #007bff !important;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+}
+
 .documantion-image {
   width: auto;
 }
@@ -142,6 +154,13 @@ body {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
   overflow: hidden;
 }
 
