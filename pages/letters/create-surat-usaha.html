@@ -98,10 +98,10 @@
           <!-- header title -->
           <div class="header-complaint d-flex align-items-center">
             <div class="col-md-8">
-              <h2>Surat Keterangan Kelahirkan</h2>
+              <h2>Surat Keterangan Usaha</h2>
               <p class="text-secondary">
                 Isi formulir di bawah ini untuk mengirimkan permintaan surat
-                keterangan kelahirkan.
+                keterangan usaha.
               </p>
             </div>
             <div class="col-md-4 text-center">
@@ -118,177 +118,59 @@
           <!-- form -->
           <div class="card p-3 border-0 rounded-4 mt-4">
             <div class="card-header bg-white border-0">
-              <h4 class="fw-medium">Form Surat Keterangan Kelahirkan</h4>
+              <h4 class="fw-medium">Form Surat Keterangan Usaha</h4>
             </div>
             <div class="card-body">
               <form action="/pages/complaints/index.html" method="POST">
-                <h6># Biodata Diri ( Anak )</h6>
                 <div class="mb-3">
-                  <label for="date" class="form-label">Tanggal Lahir</label>
+                  <label for="name" class="form-label">Nama Lengkap</label>
                   <input
-                    type="date"
+                    type="text"
                     class="form-control"
-                    id="date"
+                    id="name"
                     name="name"
+                    placeholder="Masukkan nama lengkap Anda"
                     required
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="nomer" class="form-label"
-                    >Telah lahir anak ke</label
-                  >
+                  <label for="nik" class="form-label">NIK</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nik"
+                    name="nik"
+                    placeholder="Masukkan NIK Anda"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="nik" class="form-label">No. Telp</label>
                   <input
                     type="number"
                     class="form-control"
-                    id="nomer"
-                    name="name"
-                    placeholder="Masukkan urutan kelahiran anak"
+                    id="nik"
+                    name="nik"
+                    placeholder="Masukkan No. Telp Anda"
                     required
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="nomer" class="form-label">Nama Lengkap</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="nomer"
-                    name="name"
-                    placeholder="Masukkan nama lengkap anak"
+                  <label for="email" class="form-label">Usaha</label>
+                  <select
+                    class="form-select"
+                    id="category"
+                    name="category"
                     required
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="jk" class="form-label">Jenis Kelamin</label>
-                  <select class="form-select" id="jk" name="category" required>
-                    <option value="1">Laki-laki</option>
-                    <option value="2">Perempuan</option>
+                  >
+                    <option value="1">Tani</option>
+                    <option value="2">Peternakan</option>
+                    <option value="3">Perikanan</option>
+                    <option value="4">Perdagangan</option>
+                    <option value="5">Jasa</option>
+                    <option value="6">Industri</option>
+                    <option value="7">Lainnya</option>
                   </select>
-                </div>
-                <div class="mb-3">
-                  <label for="nik" class="form-label">Kota</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="nik"
-                    name="nik"
-                    placeholder="Masukkan kota tempat lahir anak"
-                    required
-                  />
-                  <small class="text-secondary">Contoh: Probolinggo</small>
-                </div>
-                <div class="mb-3">
-                  <label for="address" class="form-label">Alamat</label>
-                  <textarea
-                    class="form-control"
-                    id="address"
-                    name="address"
-                    rows="3"
-                    placeholder="Masukkan alamat lengkap Anda"
-                    required
-                  ></textarea>
-                </div>
-                <hr />
-                <h6># Biodata Diri ( Ibu )</h6>
-                <div class="mb-3">
-                  <label for="name" class="form-label">Nama Lengkap</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="name"
-                    name="name"
-                    placeholder="Masukkan nama lengkap Anda"
-                    required
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="nik" class="form-label">NIK</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="nik"
-                    name="nik"
-                    placeholder="Masukkan NIK Anda"
-                    required
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="nik" class="form-label">Tanggal Lahir</label>
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="nik"
-                    name="nik"
-                    required
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="nik" class="form-label">Kota</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="nik"
-                    name="nik"
-                    placeholder="Masukkan kota tempat lahir"
-                    required
-                  />
-                  <small class="text-secondary">Contoh: Probolinggo</small>
-                </div>
-                <div class="mb-3">
-                  <label for="address" class="form-label">Alamat</label>
-                  <textarea
-                    class="form-control"
-                    id="address"
-                    name="address"
-                    rows="3"
-                    placeholder="Masukkan alamat lengkap Anda"
-                    required
-                  ></textarea>
-                </div>
-                <hr />
-                <h6># Biodata Diri ( Ayah )</h6>
-                <div class="mb-3">
-                  <label for="name" class="form-label">Nama Lengkap</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="name"
-                    name="name"
-                    placeholder="Masukkan nama lengkap Anda"
-                    required
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="nik" class="form-label">NIK</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="nik"
-                    name="nik"
-                    placeholder="Masukkan NIK Anda"
-                    required
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="nik" class="form-label">Tanggal Lahir</label>
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="nik"
-                    name="nik"
-                    required
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="nik" class="form-label">Kota</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="nik"
-                    name="nik"
-                    placeholder="Masukkan kota tempat lahir"
-                    required
-                  />
-                  <small class="text-secondary">Contoh: Probolinggo</small>
                 </div>
                 <div class="mb-3">
                   <label for="address" class="form-label">Alamat</label>
