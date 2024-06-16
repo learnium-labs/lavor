@@ -50,12 +50,14 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../pages/complaints/index.html"
+              <a
+                class="nav-link active"
+                href="../../pages/complaints/index.html"
                 >Pengaduan</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="../../pages/letters/index.html"
+              <a class="nav-link" href="../../pages/letters/index.html"
                 >Surat</a
               >
             </li>
@@ -87,109 +89,179 @@
     <!-- Hero -->
     <section>
       <div class="container">
-        <div class="intro-letters py-4">
-          <h4 class="badge-blue m-auto">Pelayanan Surat Online</h4>
-
-          <div class="py-2">
-            <!-- intro letters -->
-            <div class="col-md-6 m-auto text-center">
-              <h3 class="mt-3">
-                List Surat Online yang Dapat Dibuat oleh Masyarakat
-              </h3>
+        <div class="col-md-8 m-auto py-md-5 py-4">
+          <a
+            href="../../pages/letters/index.html"
+            class="btn btn-sm btn-outline-primary mb-3"
+            ><i class="bi bi-arrow-left"></i> Kembali</a
+          >
+          <!-- header title -->
+          <div class="header-complaint d-flex align-items-center">
+            <div class="col-md-8">
+              <h2>Surat Keterangan Domisili Usaha</h2>
+              <p class="text-secondary">
+                Isi formulir di bawah ini untuk mengirimkan permintaan surat
+                keterangan domisili usaha.
+              </p>
             </div>
-            <!-- end intro letters -->
-
-            <!-- list card letters -->
-            <div
-              class="d-flex flex-wrap justify-content-center align-items-center gap-3 py-4"
-            >
-              <div class="col-md-5">
-                <div class="card card-latter shadow-xd">
-                  <div class="card-body">
-                    <h5 class="card-title">Surat Keterangan Penghasilan ✉️</h5>
-                    <p class="card-text line-clamp-3">
-                      Surat keterangan penghasilan adalah surat yang dikeluarkan
-                      oleh instansi atau perusahaan yang berisi informasi
-                      tentang penghasilan seseorang.
-                    </p>
-                    <a
-                      href="./create-surat-penghasilan.html"
-                      class="btn btn-sm btn-outline-primary"
-                      >Buat Surat</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-5">
-                <div class="card card-latter shadow-xd">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Surat Keterangan Domisili Usaha 🏠
-                    </h5>
-                    <p class="card-text line-clamp-3">
-                      Surat keterangan domisili usaha adalah surat yang
-                      dikeluarkan oleh pemerintah setempat yang berisi informasi
-                      tentang domisili usaha seseorang.
-                    </p>
-                    <a
-                      href="./create-surat-domisili-usaha.html"
-                      class="btn btn-sm btn-outline-primary"
-                      >Buat Surat</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-5">
-                <div class="card card-latter shadow-xd">
-                  <div class="card-body">
-                    <h5 class="card-title">Surat Keterangan Kelahiran 👶</h5>
-                    <p class="card-text line-clamp-3">
-                      Surat keterangan kelahiran adalah surat yang dikeluarkan
-                      oleh instansi yang berwenang yang berisi informasi tentang
-                      kelahiran seseorang.
-                    </p>
-                    <a
-                      href="./create-surat-kelahirkan.html"
-                      class="btn btn-sm btn-outline-primary"
-                      >Buat Surat</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-5">
-                <div class="card card-latter shadow-xd">
-                  <div class="card-body">
-                    <h5 class="card-title">Surat Keterangan Kematian ☠️</h5>
-                    <p class="card-text line-clamp-3">
-                      Surat keterangan kematian adalah surat yang dikeluarkan
-                      oleh instansi yang berwenang yang berisi informasi tentang
-                      kematian seseorang.
-                    </p>
-                    <a href="#" class="btn btn-sm btn-outline-primary"
-                      >Buat Surat</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-5">
-                <div class="card card-latter shadow-xd">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Surat Keterangan Memiliki Usaha 🏢
-                    </h5>
-                    <p class="card-text line-clamp-3">
-                      Surat keterangan memiliki usaha adalah surat yang
-                      dikeluarkan oleh instansi yang berwenang yang berisi
-                      informasi tentang usaha seseorang.
-                    </p>
-                    <a href="#" class="btn btn-sm btn-outline-primary"
-                      >Buat Surat</a
-                    >
-                  </div>
-                </div>
-              </div>
+            <div class="col-md-4 text-center">
+              <img
+                width="120"
+                src="../../assets/images/svg/certificate.svg"
+                alt="Ilustrasi Pengaduan"
+                class="img-fluid"
+              />
             </div>
-            <!-- end list card letters -->
+          </div>
+          <!-- end header title -->
+
+          <!-- form -->
+          <div class="card p-3 border-0 rounded-4 mt-4">
+            <div class="card-header bg-white border-0">
+              <h4 class="fw-medium">Form Surat Keterangan Domisili Usaha</h4>
+            </div>
+            <div class="card-body">
+              <form action="/pages/complaints/index.html" method="POST">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Nama Lengkap</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    placeholder="Masukkan nama lengkap Anda"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="nik" class="form-label">NIK</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nik"
+                    name="nik"
+                    placeholder="Masukkan NIK Anda"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="nik" class="form-label">Tanggal Lahir</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="nik"
+                    name="nik"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="nik" class="form-label">Kota</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nik"
+                    name="nik"
+                    placeholder="Masukkan kota tempat lahir"
+                    required
+                  />
+                  <small class="text-secondary">Contoh: Probolinggo</small>
+                </div>
+                <div class="mb-3">
+                  <label for="jk" class="form-label">Jenis Kelamin</label>
+                  <select class="form-select" id="jk" name="category" required>
+                    <option value="1">Laki-laki</option>
+                    <option value="2">Perempuan</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Pekerjaan</label>
+                  <select
+                    class="form-select"
+                    id="category"
+                    name="category"
+                    required
+                  >
+                    <option selected>Pilih Pekerjaan</option>
+                    <option value="1">Karyawan Swasta</option>
+                    <option value="2">Pegawai Negeri</option>
+                    <option value="3">Wiraswasta</option>
+                    <option value="4">Lainnya</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="agama" class="form-label">Agama</label>
+                  <select
+                    class="form-select"
+                    id="agama"
+                    name="category"
+                    required
+                  >
+                    <option selected>Pilih Agama</option>
+                    <option value="1">Islam</option>
+                    <option value="2">Kristen</option>
+                    <option value="3">Katolik</option>
+                    <option value="4">Hindu</option>
+                    <option value="5">Budha</option>
+                    <option value="6">Konghucu</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="address" class="form-label">Alamat</label>
+                  <textarea
+                    class="form-control"
+                    id="address"
+                    name="address"
+                    rows="3"
+                    placeholder="Masukkan alamat lengkap Anda"
+                    required
+                  ></textarea>
+                </div>
+                <hr />
+                <div class="mb-3">
+                  <label for="usaha" class="form-label">Nama usaha</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="usaha"
+                    name="usaha"
+                    placeholder="Masukkan nama usaha Anda"
+                    required
+                  />
+                  <small class="text-secondary"
+                    >Contoh: Rental Mobil Jaya Abadi</small
+                  >
+                </div>
+                <div class="mb-3">
+                  <label for="usaha" class="form-label">Status bangunan</label>
+                  <select class="form-select" id="usaha" name="usaha" required>
+                    <option value="1">Milik Sendiri</option>
+                    <option value="2">Sewa</option>
+                    <option value="3">Lainnya</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="address" class="form-label">Alamat usaha</label>
+                  <textarea
+                    class="form-control"
+                    id="address"
+                    name="address"
+                    rows="3"
+                    placeholder="Masukkan alamat lengkap usaha Anda"
+                    required
+                  ></textarea>
+                </div>
+                <div class="mb-3">
+                  <p>
+                    <b>NB :</b> Sebelum tekan tombol kirim permintaan, pastikan
+                    data yang Anda masukkan sudah benar, karena data yang sudah
+                    dikirimkan tidak dapat diubah kembali.
+                  </p>
+                </div>
+                <button type="submit" class="btn btn-sm btn-primary">
+                  Kirim Permintaan
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

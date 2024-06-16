@@ -46,7 +46,7 @@
           >
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="../../index.html"
-              ../../index.html >Home</a
+                >Home</a
               >
             </li>
             <li class="nav-item">
@@ -57,7 +57,9 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../pages/letters/index.html">Surat</a>
+              <a class="nav-link" href="../../pages/letters/index.html"
+                >Surat</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="faq.html">FAQ</a>
@@ -89,23 +91,23 @@
       <div class="container">
         <div class="col-md-8 m-auto py-md-5 py-4">
           <a
-            href="../../pages/complaints/index.html"
+            href="../../pages/letters/index.html"
             class="btn btn-sm btn-outline-primary mb-3"
             ><i class="bi bi-arrow-left"></i> Kembali</a
           >
           <!-- header title -->
           <div class="header-complaint d-flex align-items-center">
             <div class="col-md-8">
-              <h2>Tuliskan Keluhan Anda Disini.</h2>
+              <h2>Surat Keterangan Kelahirkan</h2>
               <p class="text-secondary">
-                Isi formulir di bawah ini untuk mengirimkan keluhan Anda kepada
-                kami.
+                Isi formulir di bawah ini untuk mengirimkan permintaan surat
+                keterangan kelahirkan.
               </p>
             </div>
             <div class="col-md-4 text-center">
               <img
-                width="170"
-                src="../../assets/images/svg/lemeting2.svg"
+                width="120"
+                src="../../assets/images/svg/certificate.svg"
                 alt="Ilustrasi Pengaduan"
                 class="img-fluid"
               />
@@ -116,71 +118,198 @@
           <!-- form -->
           <div class="card p-3 border-0 rounded-4 mt-4">
             <div class="card-header bg-white border-0">
-              <h4 class="fw-medium">Form Pengaduan</h4>
+              <h4 class="fw-medium">Form Surat Keterangan Kelahirkan</h4>
             </div>
             <div class="card-body">
               <form action="/pages/complaints/index.html" method="POST">
+                <h6># Biodata ( Anak )</h6>
                 <div class="mb-3">
-                  <label for="title" class="form-label">Petanyaan</label>
+                  <label for="date" class="form-label">Tanggal Lahir</label>
                   <input
-                    type="text"
+                    type="date"
                     class="form-control"
-                    id="title"
+                    id="date"
                     name="name"
-                    placeholder="Tuliskan judul keluhan Anda"
                     required
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="email" class="form-label">Kategori</label>
-                  <select
-                    class="form-select"
-                    id="category"
-                    name="category"
-                    required
+                  <label for="nomer" class="form-label"
+                    >Telah lahir anak ke</label
                   >
-                    <option selected>Pilih Kategori</option>
-                    <option value="1">Pelayanan Publik</option>
-                    <option value="2">Pelayanan Kesehatan</option>
-                    <option value="3">Pelayanan Pendidikan</option>
-                    <option value="4">Pelayanan Transportasi</option>
-                    <option value="5">Pelayanan Keamanan</option>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="nomer"
+                    name="name"
+                    placeholder="Masukkan urutan kelahiran anak"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="nomer" class="form-label">Nama Lengkap</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nomer"
+                    name="name"
+                    placeholder="Masukkan nama lengkap anak"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="jk" class="form-label">Jenis Kelamin</label>
+                  <select class="form-select" id="jk" name="category" required>
+                    <option value="1">Laki-laki</option>
+                    <option value="2">Perempuan</option>
                   </select>
                 </div>
                 <div class="mb-3">
-                  <label for="file" class="form-label"
-                    >Upload gambar ( opsional )</label
-                  >
-                  <div class="d-flex align-items-center flex-wrap gap-2">
-                    <div class="box-image">
-                      <input
-                        id="file-input"
-                        name="attachments[]"
-                        type="file"
-                        required
-                        multiple
-                        class="form-control hide-input"
-                        accept="image/*"
-                      />
-                      <span class="text-muted">Upload</span>
-                    </div>
-                  </div>
-                  <small class="text-muted"
-                    >Upload gambar yang relevan dengan keluhan Anda.</small
-                  >
+                  <label for="nik" class="form-label">Kota</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nik"
+                    name="nik"
+                    placeholder="Masukkan kota tempat lahir anak"
+                    required
+                  />
+                  <small class="text-secondary">Contoh: Probolinggo</small>
                 </div>
                 <div class="mb-3">
-                  <label for="complaint" class="form-label">Keluhan</label>
+                  <label for="address" class="form-label">Alamat</label>
                   <textarea
-                    class="form-control summernote"
-                    id="complaint"
-                    name="complaint"
+                    class="form-control"
+                    id="address"
+                    name="address"
                     rows="3"
+                    placeholder="Masukkan alamat lengkap Anda"
                     required
                   ></textarea>
                 </div>
+                <hr />
+                <h6># Biodata Diri ( Ibu )</h6>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Nama Lengkap</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    placeholder="Masukkan nama lengkap Anda"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="nik" class="form-label">NIK</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nik"
+                    name="nik"
+                    placeholder="Masukkan NIK Anda"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="nik" class="form-label">Tanggal Lahir</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="nik"
+                    name="nik"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="nik" class="form-label">Kota</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nik"
+                    name="nik"
+                    placeholder="Masukkan kota tempat lahir"
+                    required
+                  />
+                  <small class="text-secondary">Contoh: Probolinggo</small>
+                </div>
+                <div class="mb-3">
+                  <label for="address" class="form-label">Alamat</label>
+                  <textarea
+                    class="form-control"
+                    id="address"
+                    name="address"
+                    rows="3"
+                    placeholder="Masukkan alamat lengkap Anda"
+                    required
+                  ></textarea>
+                </div>
+                <hr />
+                <h6># Biodata Diri ( Ayah )</h6>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Nama Lengkap</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    placeholder="Masukkan nama lengkap Anda"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="nik" class="form-label">NIK</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nik"
+                    name="nik"
+                    placeholder="Masukkan NIK Anda"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="nik" class="form-label">Tanggal Lahir</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="nik"
+                    name="nik"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="nik" class="form-label">Kota</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nik"
+                    name="nik"
+                    placeholder="Masukkan kota tempat lahir"
+                    required
+                  />
+                  <small class="text-secondary">Contoh: Probolinggo</small>
+                </div>
+                <div class="mb-3">
+                  <label for="address" class="form-label">Alamat</label>
+                  <textarea
+                    class="form-control"
+                    id="address"
+                    name="address"
+                    rows="3"
+                    placeholder="Masukkan alamat lengkap Anda"
+                    required
+                  ></textarea>
+                </div>
+                <div class="mb-3">
+                  <p>
+                    <b>NB :</b> Sebelum tekan tombol kirim permintaan, pastikan
+                    data yang Anda masukkan sudah benar, karena data yang sudah
+                    dikirimkan tidak dapat diubah kembali.
+                  </p>
+                </div>
                 <button type="submit" class="btn btn-sm btn-primary">
-                  Kirim Pengaduan
+                  Kirim Permintaan
                 </button>
               </form>
             </div>
@@ -206,7 +335,11 @@
             <h5 class="mb-3">Link Terkait</h5>
             <ul class="list-unstyled text-sm">
               <li class="mb-2">
-                <a class="text-decoration-none text-white" href="../../index.html">Home</a>
+                <a
+                  class="text-decoration-none text-white"
+                  href="../../index.html"
+                  >Home</a
+                >
               </li>
               <li class="mb-2">
                 <a
@@ -216,7 +349,11 @@
                 >
               </li>
               <li class="mb-2">
-                <a class="text-decoration-none text-white" href="../../pages/letters/index.html">Surat</a>
+                <a
+                  class="text-decoration-none text-white"
+                  href="../../pages/letters/index.html"
+                  >Surat</a
+                >
               </li>
               <li class="mb-2">
                 <a class="text-decoration-none text-white" href="#">FAQ</a>
@@ -308,91 +445,6 @@
           } else {
             scrollButton.removeClass("floating");
           }
-        });
-      });
-    </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
-    <script>
-      $(".summernote").summernote({
-        // simple toolbar
-        toolbar: [
-          ["style", ["style"]],
-          ["font", ["bold", "underline", "clear"]],
-          ["para", ["ul", "ol", "paragraph"]],
-        ],
-        placeholder: "Tuliskan keluhan Anda di sini...",
-        tabsize: 2,
-        height: 220,
-      });
-    </script>
-    <script>
-      $(document).ready(function () {
-        $("#file-input").on("change", function () {
-          $(".box-image-preview").remove(); // Hapus semua pratinjau yang ada sebelumnya
-
-          $.each(this.files, function (index, file) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-              var preview = $(
-                '<div class="box-image-preview overflow-hidden">' +
-                  '<img src="' +
-                  e.target.result +
-                  '" alt="Preview" style="width: 100%;">' +
-                  '<i class="bi bi-trash text-danger fs-5 btn-delete"></i>' +
-                  "</div>"
-              );
-              $(".box-image").after(preview);
-            };
-            reader.readAsDataURL(file);
-          });
-        });
-
-        $(document).on("click", ".btn-delete", function () {
-          $(this).closest(".box-image-preview").remove();
-          if ($(".box-image-preview").length === 0) {
-            // Kembalikan input file ke keadaan semula jika tidak ada pratinjau yang tersisa
-            $("#file-input").val("");
-          }
-
-          // Update file input
-          var files = $("#file-input")[0].files;
-          var newFiles = [];
-          var remainingFiles = [];
-
-          $(".box-image-preview img").each(function () {
-            remainingFiles.push($(this).attr("src"));
-          });
-
-          $.each(files, function (index, file) {
-            var fileReader = new FileReader();
-            fileReader.onload = function (e) {
-              if (remainingFiles.indexOf(e.target.result) !== -1) {
-                newFiles.push(file);
-              }
-              if (index === files.length - 1) {
-                var dataTransfer = new DataTransfer();
-                for (var i = 0; i < newFiles.length; i++) {
-                  dataTransfer.items.add(newFiles[i]);
-                }
-                $("#file-input")[0].files = dataTransfer.files;
-              }
-            };
-            fileReader.readAsDataURL(file);
-          });
         });
       });
     </script>
